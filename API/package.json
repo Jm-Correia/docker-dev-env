@@ -1,0 +1,12 @@
+{
+  "name": "node_api",
+  "version": "1.0.0",
+  "author": "Your Name <email@example.com>",
+  "module": "module",
+  "scripts": {
+    "dev:api": "node ./src/app/App.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "name": "web_vue",
+    "version": "1.0.0",
+    "author": "Your Name <email@example.com>",
+    "scripts": {
+        "dev:web": "node ./src/index.js"
+    }
+  }

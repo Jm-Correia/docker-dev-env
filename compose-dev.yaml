@@ -1,0 +1,28 @@
+services:
+    db:
+        image: mongo
+        restart: always
+        volumes:
+            - ./data/db:/data/db
+        ports:
+            - 27017:27017
+    api:
+        build: ./API/
+        container_name: lib_api
+        restart: always
+        volumes: 
+            - ./API:/usr/app
+        ports:
+            - 4000:4000
+        depends_on:
+            - db
+    web:
+        build: ./WEB/
+        container_name: web_vue
+        restart: always
+        volumes: 
+            - ./WEB:/usr/app
+        ports:
+            - 3000:3000
+        depends_on:
+            - api
